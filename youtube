@@ -1,0 +1,21 @@
+name: YouTube视频
+
+compat_arguments:
+  上传: 'true'
+  短视频: 'true'
+
+url_rewrites:
+- match: ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$
+  location: 'https://stream.maasea.workers.dev/$1?blockUpload={{{上传}}}&blockShorts={{{短视频}}}&$4'
+  status_code: 307
+
+map_locals:
+- match: ^https:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad
+  status_code: 200
+  body: ' '
+
+mitm:
+  hostnames:
+    includes:
+    - '*.googlevideo.com'
+    - youtubei.googleapis.com
