@@ -1,0 +1,34 @@
+name: 酷安
+
+body_rewrites:
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/search
+    filter: del(.data[]|select(.entityId==16977 or .entityId==20252))
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/feed\/detail
+    filter: del(.data.include_goods,.data.include_goods_ids,.data.detailSponsorCard,.data.targetRow,.data.tcat)
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/feed\/replyList
+    filter: del(.data[]|select(.entityTemplate=="feedDetailReplySponsorCard"))
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8
+    filter: del(.data[]|select(.extraDataArr.cardId==29349 or .extraDataArr.cardId==29519 or .extraDataArr.cardId==32557 or .entityTemplate=="sponsorCard"))
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList
+    filter: del(.data[]|select(.entityId==24309 or .entityId==12889 or .entityId==40933 or .entityId==40573 or .entityId==14675 or .entityId==39609 or .entityId==41629 or .entityId==32618 or .entityId==28773 or .entityTemplate=="sponsorCard"))
+- response_jq:
+    match: ^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig
+    filter: del(.data[]|select(.entityId==14809 or .entityId==1002))
+
+scriptings:
+- http_response:
+    name: 广告处理
+    match: ^https:\/\/api\.coolapk\.com\/v6\/main\/init
+    script_url: https://github.com/zjinkee/script/raw/refs/heads/main/CoolAPK.js
+    timeout: 60
+    body_required: true
+
+mitm:
+  hostnames:
+    includes:
+    - api.coolapk.com
