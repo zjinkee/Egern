@@ -1,0 +1,42 @@
+name: 酷狗音乐
+
+body_rewrites:
+- response_jq:
+    match: ^https:\/\/adservice\.kugou\.com\/v2\/lite_v_youth_task_center
+    filter: del(.data.ads.lite_v_youth_task_center_link[].copywriting)
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/channel\/tab_list
+    filter: .data.list|=map(select((.tab_id==-1or.tab_id==2)|not))
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/card\/v1\/pxy
+    filter: .data.responses|=map(select(.module!="y_lab"and.module!="y_hot"and.module!="y_song_module_6"and.module!="y_tag"))
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/account\/get_vip_tips
+    filter: .data.account_tips.title="增强无广告"
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/experiment\/get_params
+    filter: .data.olexp_params.flash_ad_show=0|.data.olexp_params.popup_show=0
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/ab\/tmeab\?ab_source=TMEAB0tgviptype0type
+    filter: .data.TMEAB0tgviptype0type.mapParams.Insert_ads_mode="0"|.data.TMEAB0tgviptype0type.mapParams.Insert_ads_drag="0"|.data.TMEAB0tgviptype0type.mapParams.Insert_ads_timing="0"|.data.TMEAB0tgviptype0type.mapParams.Insert_ads_point="0"|.data.TMEAB0tgviptype0type.mapParams.vip_free_times="999"|.data.TMEAB0tgviptype0type.mapParams.vip_free_timeperiod="999"|.data.TMEAB0tgviptype0type.mapParams.songs_pop_ups_max="0"|.data.TMEAB0tgviptype0type.mapParams.singlesong_pop_ups_max="0"|.data.TMEAB0tgviptype0type.mapParams.hide_tvbar="0"
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/ab\/tmeab\?ab_source=changtingdaily
+    filter: .data.TMEAB0ad0type.mapParams|=with_entries(.value="0")|.data.viphide.mapParams.song_mode_unvipsong="0"|.data.viphide.mapParams.song_mode_hide="0"|.data.viphide.mapParams.video_play_hide="0"|.data.TMEAB0sharefree0type.mapParams.share_free="1"|.data.TMEAB0vipplay0type.mapParams.vipplay_type="0"|.data.TMEAB0vipplay0type.mapParams.ad_seconds="0"|.data.TMEAB0audition0type.mapParams.secs="999"
+- response_jq:
+    match: ^https:\/\/gateway\.kugou\.com\/youth\/v1\/ab\/tmeab\?ab_source=SearchListV2
+    filter: .data.TMEAB0EarningTab0type.mapParams.Earning_Tab="0"|.data.TMEAB0TaskCenterEnter0type.mapParams.TFC="0"|.data.TMEAB0TaskCenterEnter0type.mapParams.ad="0"|.data.TMEAB0signin0type.mapParams.enter="0"|.data.TMEAB0freesignin0type.mapParams.enter="0"|.data.TMEAB0FreemiumModelTouchpoint0type.mapParams|=with_entries(.value="0")|.data.TMEAB0notpay0splashinterval.mapParams.is_show_up="0"|.data.TMEAB0GNBad0splashexpcontrol.mapParams.front_5s="0"|.data.TMEAB0svipnewguoqiup0Type.mapParams.up_style="0"|.data.TMEAB0wvipguoqiup0Type.mapParams.is_show="0"|.data.TMEAB0vipshellwindow0type.mapParams|=with_entries(.value="0")|.data.TMEAB0fmBidding.mapParams.rewardAdLocalCache="0"|.data.aiwritesong.mapParams.aiwritesong="0"|.data.TMEAB0bofangballchudian0Type.mapParams.is_show="0"
+- response_jq:
+    match: ^https:\/\/us\.l\.qq\.com\/exapp
+    filter: .data[]|=(.is_empty=0|.ret=0|.list=[{"video":"","timelife":0,"endtime":0,"begintime":9999999999}])|.rpt=0
+
+map_locals:
+- match: ^https:\/\/gateway\.kugou\.com\/(goddess\/v1\/content\/biz_list|ads.service|ads.gateway|youth\/v2\/activity\/task_list)
+  status_code: 200
+  body: ' '
+
+mitm:
+  hostnames:
+    includes:
+    - us.l.qq.com
+    - adservice.kugou.com
+    - gateway.kugou.com
