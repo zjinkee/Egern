@@ -1,0 +1,54 @@
+name: 波点音乐
+
+body_rewrites:
+- response_jq:
+    match: ^https:\/\/us\.l\.qq\.com\/exapp
+    filter: .data[]|=(.is_empty=0|.ret=0|.list=[{"video":"","timelife":0,"endtime":0,"begintime":9999999999}])|.rpt=0
+- response_jq:
+    match: ^https:\/\/ab-bodian\.kuwo\.cn\/abtest\/ui\/info
+    filter: .data.mapTestInfo.BDLaunchApp.mapParams.ad_type="0"|.data.mapTestInfo.BDLaunchApp.mapParams.launchApp="0"|.data.mapTestInfo.ZS9ad.mapParams.9ad="0"|.data.mapTestInfo["9Ad"].mapParams["9Ad"]="0"|.data.mapTestInfo.PopIntervalSeconds.mapParams.interval_seconds="999999"|.data.mapTestInfo.adExpiresFreemodeShowad.mapParams.rewardReqNewBeforeShow="0"|.data.mapTestInfo.adExpiresFreemodeShowad.mapParams.allowRepeatRequest="0"
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api\/play\/sound\/effect\/list
+    filter: .data.list|=map(.vipType="free"|.audition=0)
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all
+    filter: .data.groupSign.adExitChange=0|.data.groupSign.adGuideTest=0|.data.groupSign.adStartAppDialog=0|.data.groupSign.recommendTest=0|.data.groupSign.treeHoleFeedPercent=0|.data.groupSign.playTips=0|.data.conf.adDownListOpen=0|.data.conf.adGuidePopCount=0|.data.conf.delayPopSecond=999999|.data.conf.activity_best_switch="0"|.data.conf.isOpenImport=true|.data.conf.enableQrcodeEnter=true
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api\/voice\/room\/v2\/sidebar
+    filter: .data.sidebar|=map(select(.id==4or.id==30or.id==3or.id==10or.id==31)|.coverGif=""|.name=(if .id==4then"驾车节奏"elif .id==30then"轻松通勤"elif .id==3then"夜间情绪"elif .id==10then"助眠时刻"elif .id==31then"微醺氛围"else.name end))
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/index
+    filter: .data.moduleList|=map(select(.type==4or.type==3or.type==10or.type==7or.type==5))
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene
+    filter: .data.showShopEntry=false|.data.AllDialogIntervals=999999|.data.adsNotFinishVipPop4DayInterval=999999|.data.playingPageCollectPagList=[]|.data.warmStartDialog.count=0|.data.warmStartDialog.interval=999999|.data.playingPageOutCommentConfig.interval=999999|.data.playFeedDayCount=0|.data.offlineFavTipsGuide=0|.data.downLoadZoneConfig.freeTimeRemindTip=0
+- response_jq:
+    match: ^https:\/\/bd-api\.kuwo\.cn\/api/ucenter\/users\/(pub|login)
+    filter: .data.payInfo|=(.isSignedBoolean=true|.isCtVipBoolean=true|.isCtPayVipBoolean=true|.isVip=1|.isVipBoolean=true|.isBigVipBoolean=true|.isBigPayVipBoolean=true|.isPayVipBoolean=true|.isActVipBoolean=true|.isSigned=1|.isFreeCtVip=true|.vipType=1|.payVipType=1|.actVipType=1|.signType=1|.ctExpireDate=2524608000000|.bigExpireDate=2524608000000|.bigPayExpireDate=2524608000000|.payExpireDate=2524608000000|.actExpireDate=2524608000000|.ctPayExpireDate=2524608000000|.expireDate=2524608000000)|.data.userInfo|=(.isVip=1|.vipType=1|.authType=1|.payVipType=1)
+
+map_locals:
+- match: ^https:\/\/bd-api\.kuwo\.cn\/api\/(service\/advert\/config|play\/advert\/info|service\/banner\/positions|pay\/vip\/invitation|search\/topic\/word\/list|advert\/free\/config|pay\/vip\/lowPriceText)
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{"code": 439,"data":{},"msg":"success","profileId": "site"}'
+- match: ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter
+  status_code: 200
+  headers:
+    Content-Type: application/json
+  body: '{"code":200,"data":{"fristVipSingleBtn":0,"fristVipListBtn":0,"fristVipPlayBtn":0},"msg":"success","profileId":"site"}'
+
+scriptings:
+- http_response:
+    name: 解锁播放
+    match: ^https:\/\/bd-api\.kuwo\.cn\/.*(audioUrl|checkRight|music\/info|download|audition)
+    script_url: https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js
+    timeout: 60
+    body_required: true
+
+mitm:
+  hostnames:
+    includes:
+    - us.l.qq.com
+    - bd-api.kuwo.cn
+    - ab-bodian.kuwo.cn
