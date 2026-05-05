@@ -27,12 +27,12 @@ body_rewrites:
     filter: .data.TMEAB0EarningTab0type.mapParams.Earning_Tab="0"|.data.TMEAB0TaskCenterEnter0type.mapParams.TFC="0"|.data.TMEAB0TaskCenterEnter0type.mapParams.ad="0"|.data.TMEAB0signin0type.mapParams.enter="0"|.data.TMEAB0freesignin0type.mapParams.enter="0"|.data.TMEAB0FreemiumModelTouchpoint0type.mapParams|=with_entries(.value="0")|.data.TMEAB0notpay0splashinterval.mapParams.is_show_up="0"|.data.TMEAB0GNBad0splashexpcontrol.mapParams.front_5s="0"|.data.TMEAB0svipnewguoqiup0Type.mapParams.up_style="0"|.data.TMEAB0wvipguoqiup0Type.mapParams.is_show="0"|.data.TMEAB0vipshellwindow0type.mapParams|=with_entries(.value="0")|.data.TMEAB0fmBidding.mapParams.rewardAdLocalCache="0"|.data.aiwritesong.mapParams.aiwritesong="0"|.data.TMEAB0bofangballchudian0Type.mapParams.is_show="0"
 - response_jq:
     match: ^https:\/\/us\.l\.qq\.com\/exapp
-    filter: .data[]|=(.is_empty=0|.ret=0|.list=[{"video":"","timelife":0,"endtime":0,"begintime":9999999999}])|.rpt=0
+    filter: .data[].list[].is_empty=1|.data[].list[].video=""|.data[].list[].img=""|.data[].list[].sdk_proto_type=0|.data[].list[].sdk_jump_type=0
 
 map_locals:
-- match: ^https:\/\/gateway\.kugou\.com\/(goddess\/v1\/content\/biz_list|ads.service|ads.gateway|youth\/v2\/activity\/task_list)
+- match: ^https:\/\/gateway\.kugou\.com\/(goddess\/v1\/content\/biz_list|ads.service|ads.gateway|youth\/(v2\/activity\/task_list|v1\/system\/profile))
   status_code: 200
-  body: ' '
+  body: '{}'
 
 mitm:
   hostnames:
