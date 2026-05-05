@@ -24,7 +24,7 @@ body_rewrites:
     filter: .data.payInfo|=(.isSignedBoolean=true|.isCtVipBoolean=true|.isCtPayVipBoolean=true|.isVip=1|.isVipBoolean=true|.isBigVipBoolean=true|.isBigPayVipBoolean=true|.isPayVipBoolean=true|.isActVipBoolean=true|.isSigned=1|.isFreeCtVip=true|.vipType=1|.payVipType=1|.actVipType=1|.signType=1|.ctExpireDate=2524608000000|.bigExpireDate=2524608000000|.bigPayExpireDate=2524608000000|.payExpireDate=2524608000000|.actExpireDate=2524608000000|.ctPayExpireDate=2524608000000|.expireDate=2524608000000)|.data.userInfo|=(.isVip=1|.vipType=1|.authType=1|.payVipType=1)
 - response_jq:
     match: ^https:\/\/us\.l\.qq\.com\/exapp
-    filter: .data[]|=(.is_empty=0|.ret=0|.list=[{"video":"","timelife":0,"endtime":0,"begintime":9999999999}])|.rpt=0
+    filter: .data[].list[].is_empty=1|.data[].list[].video=""|.data[].list[].img=""|.data[].list[].sdk_proto_type=0|.data[].list[].sdk_jump_type=0
 
 map_locals:
 - match: ^https:\/\/bd-api\.kuwo\.cn\/api\/(service\/advert\/config|play\/advert\/info|service\/banner\/positions|pay\/vip\/invitation|search\/topic\/word\/list|advert\/free\/config|pay\/vip\/lowPriceText)
