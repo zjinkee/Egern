@@ -1,4 +1,4 @@
-name: Youtube视频
+name: YouTube视频
 
 compat_arguments:
   上传: 'true'
