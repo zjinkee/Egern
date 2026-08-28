@@ -1,0 +1,21 @@
+name: YouTube
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/YouTube_play_button_square_%282013-2017%29.svg/500px-YouTube_play_button_square_%282013-2017%29.svg.png
+
+map_locals:
+- match: ^https:\/\/[^\/]+\.googlevideo\.com\/initplayback\?.*&ack=
+  status_code: 200
+  body: ''
+
+scriptings:
+- http_response:
+    name: 广告处理
+    match: ^https:\/\/[^\/]+\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|config))(\?(.*))?$
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/Youtube.js
+    body_required: true
+    binary_body: true
+
+mitm:
+  hostnames:
+    includes:
+    - '*.googlevideo.com'
+    - youtubei.googleapis.com
