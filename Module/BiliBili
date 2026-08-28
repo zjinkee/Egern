@@ -1,0 +1,55 @@
+name: 哔哩哔哩
+icon: https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/e6/9e/63e69e8d-89a9-ea30-d3cc-da6706fdc8c9/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.png
+
+body_rewrites:
+- response_jq:
+    match: ^https:\/\/api\.bilibili\.com\/x\/vip\/ads\/materials
+    filter: '{code,message,ttl,data:{}}'
+- response_jq:
+    match: ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo
+    filter: ' .data.vip|=if . !=null and .status ==0 then . + {status:1,type:2,due_date:9005270400000,role:15} else . end'
+
+scriptings:
+- http_response:
+    name: 开屏广告
+    match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show|event\/list2)
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/bilibili.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: 搜索
+    match: ^https:\/\/app\.bilibili\.com\/x\/v2\/search
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/bilibili.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: 推荐视频
+    match: ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/(index\/story|index\?)
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/bilibili.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: 主页Tab
+    match: ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/bilibili.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: 我的页面
+    match: ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad)
+    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/bilibili.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: 视频广告
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$
+    script_url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.response.js
+    body_required: true
+    binary_body: true
+
+mitm:
+  hostnames:
+    includes:
+    - app.bilibili.com
+    - api.bilibili.com
+    - grpc.biliapi.net
