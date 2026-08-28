@@ -1,0 +1,15 @@
+name: 可莉转Egern
+icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwr5d8eSqDFMSOOMg9Hnzl3Odl3Nm_5zHqFLD_SfedLu8vEUj9THNKXre&s=10
+
+header_rewrites:
+- replace:
+    match: ^https:\/\/rule\.kelee\.one/
+    name: user-agent
+    value: Loon/984 CFNetwork/3860.700.1 Darwin/25.6.0
+    type: request
+
+mitm:
+  hostnames:
+    includes:
+    - rule.kelee.one
+
