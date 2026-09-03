@@ -1,0 +1,482 @@
+# Google 主域名
+DOMAIN-SUFFIX,google.com,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN-SUFFIX,gstatic.com,Google
+DOMAIN-SUFFIX,ggpht.com,Google
+DOMAIN-SUFFIX,googlevideo.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN-SUFFIX,googleapis.cn,Google
+DOMAIN-SUFFIX,gstatic.cn,Google
+DOMAIN-SUFFIX,1e100.net,Google
+
+# Google 搜索
+DOMAIN-SUFFIX,google.com,Google
+DOMAIN-SUFFIX,google.co.jp,Google
+DOMAIN-SUFFIX,google.co.uk,Google
+DOMAIN-SUFFIX,google.ca,Google
+DOMAIN-SUFFIX,google.com.au,Google
+DOMAIN-SUFFIX,google.de,Google
+DOMAIN-SUFFIX,google.fr,Google
+DOMAIN-SUFFIX,google.it,Google
+DOMAIN-SUFFIX,google.es,Google
+DOMAIN-SUFFIX,google.nl,Google
+DOMAIN-SUFFIX,google.com.br,Google
+DOMAIN-SUFFIX,google.com.sg,Google
+DOMAIN-SUFFIX,google.co.in,Google
+DOMAIN-SUFFIX,google.com.hk,Google
+DOMAIN-SUFFIX,google.com.tw,Google
+DOMAIN-SUFFIX,google.co.kr,Google
+DOMAIN-SUFFIX,google.com.mx,Google
+DOMAIN-SUFFIX,google.ru,Google
+DOMAIN-SUFFIX,google.pl,Google
+DOMAIN-SUFFIX,google.se,Google
+DOMAIN-SUFFIX,google.no,Google
+DOMAIN-SUFFIX,google.dk,Google
+DOMAIN-SUFFIX,google.fi,Google
+DOMAIN-SUFFIX,google.at,Google
+DOMAIN-SUFFIX,google.ch,Google
+DOMAIN-SUFFIX,google.be,Google
+DOMAIN-SUFFIX,google.pt,Google
+DOMAIN-SUFFIX,google.ie,Google
+DOMAIN-SUFFIX,google.co.nz,Google
+DOMAIN-SUFFIX,google.co.za,Google
+DOMAIN-SUFFIX,google.com.tr,Google
+DOMAIN-SUFFIX,google.gr,Google
+DOMAIN-SUFFIX,google.cz,Google
+DOMAIN-SUFFIX,google.hu,Google
+DOMAIN-SUFFIX,google.ro,Google
+DOMAIN-SUFFIX,google.bg,Google
+DOMAIN-SUFFIX,google.rs,Google
+DOMAIN-SUFFIX,google.ua,Google
+DOMAIN-SUFFIX,google.cl,Google
+DOMAIN-SUFFIX,google.com.ar,Google
+DOMAIN-SUFFIX,google.com.co,Google
+DOMAIN-SUFFIX,google.pe,Google
+DOMAIN-SUFFIX,google.com.ph,Google
+DOMAIN-SUFFIX,google.com.my,Google
+DOMAIN-SUFFIX,google.co.id,Google
+DOMAIN-SUFFIX,google.co.th,Google
+DOMAIN-SUFFIX,google.vn,Google
+DOMAIN-SUFFIX,google.com.vn,Google
+
+# Google 账户 / 登录
+DOMAIN-SUFFIX,accounts.google.com,Google
+DOMAIN-SUFFIX,accounts.googleusercontent.com,Google
+DOMAIN-SUFFIX,accounts.gstatic.com,Google
+DOMAIN-SUFFIX,oauthaccountmanager.googleapis.com,Google
+DOMAIN-SUFFIX,reauth.cloud.google.com,Google
+DOMAIN-SUFFIX,ogs.google.com,Google
+
+# Gmail
+DOMAIN-SUFFIX,gmail.com,Google
+DOMAIN-SUFFIX,mail.google.com,Google
+DOMAIN-SUFFIX,gmail.googleusercontent.com,Google
+DOMAIN-SUFFIX,googlemail.com,Google
+
+# Google Drive
+DOMAIN-SUFFIX,drive.google.com,Google
+DOMAIN-SUFFIX,drive.googleusercontent.com,Google
+DOMAIN-SUFFIX,docs.google.com,Google
+DOMAIN-SUFFIX,docs.googleusercontent.com,Google
+DOMAIN-SUFFIX,googledrive.com,Google
+
+# Google Docs / Sheets / Slides
+DOMAIN-SUFFIX,docs.google.com,Google
+DOMAIN-SUFFIX,sheets.google.com,Google
+DOMAIN-SUFFIX,slides.google.com,Google
+DOMAIN-SUFFIX,script.google.com,Google
+DOMAIN-SUFFIX,forms.google.com,Google
+DOMAIN-SUFFIX,sites.google.com,Google
+DOMAIN-SUFFIX,c.docs.google.com,Google
+DOMAIN-SUFFIX,drive.googleusercontent.com,Google
+
+# Google Photos
+DOMAIN-SUFFIX,photos.google.com,Google
+DOMAIN-SUFFIX,photos.googleusercontent.com,Google
+DOMAIN-SUFFIX,lh3.googleusercontent.com,Google
+DOMAIN-SUFFIX,lh4.googleusercontent.com,Google
+DOMAIN-SUFFIX,lh5.googleusercontent.com,Google
+DOMAIN-SUFFIX,lh6.googleusercontent.com,Google
+DOMAIN-SUFFIX,lh3.ggpht.com,Google
+DOMAIN-SUFFIX,lh4.ggpht.com,Google
+DOMAIN-SUFFIX,lh5.ggpht.com,Google
+DOMAIN-SUFFIX,lh6.ggpht.com,Google
+
+# YouTube
+DOMAIN-SUFFIX,youtube.com,Google
+DOMAIN-SUFFIX,youtu.be,Google
+DOMAIN-SUFFIX,youtube-nocookie.com,Google
+DOMAIN-SUFFIX,youtubeeducation.com,Google
+DOMAIN-SUFFIX,youtube-3rd-party.com,Google
+DOMAIN-SUFFIX,googlevideo.com,Google
+DOMAIN-SUFFIX,ytimg.com,Google
+DOMAIN-SUFFIX,s.ytimg.com,Google
+
+# YouTube Music
+DOMAIN-SUFFIX,music.youtube.com,Google
+DOMAIN-SUFFIX,music.google.com,Google
+
+# Google Maps
+DOMAIN-SUFFIX,maps.google.com,Google
+DOMAIN-SUFFIX,maps.google.co.jp,Google
+DOMAIN-SUFFIX,maps.googleapis.com,Google
+DOMAIN-SUFFIX,maps.gstatic.com,Google
+DOMAIN-SUFFIX,mapsresources-pa.googleapis.com,Google
+DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,Google
+DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,Google
+DOMAIN-SUFFIX,khm.google.com,Google
+DOMAIN-SUFFIX,khms.google.com,Google
+DOMAIN-SUFFIX,khms0.google.com,Google
+DOMAIN-SUFFIX,khms1.google.com,Google
+DOMAIN-SUFFIX,khms2.google.com,Google
+DOMAIN-SUFFIX,khms3.google.com,Google
+DOMAIN-SUFFIX,khms0.googleapis.com,Google
+DOMAIN-SUFFIX,khms1.googleapis.com,Google
+DOMAIN-SUFFIX,khms2.googleapis.com,Google
+DOMAIN-SUFFIX,khms3.googleapis.com,Google
+DOMAIN-SUFFIX,geo0.ggpht.com,Google
+DOMAIN-SUFFIX,geo1.ggpht.com,Google
+DOMAIN-SUFFIX,geo2.ggpht.com,Google
+DOMAIN-SUFFIX,geo3.ggpht.com,Google
+DOMAIN-SUFFIX,clients4.google.com,Google
+
+# Google Play
+DOMAIN-SUFFIX,play.google.com,Google
+DOMAIN-SUFFIX,play.googleusercontent.com,Google
+DOMAIN-SUFFIX,android.com,Google
+DOMAIN-SUFFIX,android.clients.google.com,Google
+DOMAIN-SUFFIX,android.googleapis.com,Google
+DOMAIN-SUFFIX,dl.google.com,Google
+DOMAIN-SUFFIX,dl-ssl.google.com,Google
+DOMAIN-SUFFIX,market.android.com,Google
+
+# Google Play 服务 / Android
+DOMAIN-SUFFIX,gvt1.com,Google
+DOMAIN-SUFFIX,gvt2.com,Google
+DOMAIN-SUFFIX,gvt3.com,Google
+DOMAIN-SUFFIX,gvt6.com,Google
+DOMAIN-SUFFIX,gvt9.com,Google
+DOMAIN-SUFFIX,gvt1.com,Google
+DOMAIN-SUFFIX,fcm.googleapis.com,Google
+DOMAIN-SUFFIX,fcm-xmpp.googleapis.com,Google
+DOMAIN-SUFFIX,gcm.googleapis.com,Google
+DOMAIN-SUFFIX,gcm-http.googleapis.com,Google
+DOMAIN-SUFFIX,gcm-xmpp.googleapis.com,Google
+DOMAIN-SUFFIX,mtalk.google.com,Google
+DOMAIN-SUFFIX,connectivitycheck.android.com,Google
+DOMAIN-SUFFIX,connectivitycheck.gstatic.com,Google
+
+# Google Chrome
+DOMAIN-SUFFIX,chrome.google.com,Google
+DOMAIN-SUFFIX,chromereporting.googleapis.com,Google
+DOMAIN-SUFFIX,chromeos.google.com,Google
+DOMAIN-SUFFIX,chromeenterprise.google,Google
+DOMAIN-SUFFIX,update.googleapis.com,Google
+DOMAIN-SUFFIX,omahaproxy.appspot.com,Google
+DOMAIN-SUFFIX,cros-omahaproxy.appspot.com,Google
+DOMAIN-SUFFIX,clients1.google.com,Google
+DOMAIN-SUFFIX,clients2.google.com,Google
+DOMAIN-SUFFIX,clients3.google.com,Google
+DOMAIN-SUFFIX,clients4.google.com,Google
+DOMAIN-SUFFIX,clients5.google.com,Google
+DOMAIN-SUFFIX,clients6.google.com,Google
+
+# Google Fonts
+DOMAIN-SUFFIX,fonts.google.com,Google
+DOMAIN-SUFFIX,fonts.googleapis.com,Google
+DOMAIN-SUFFIX,fonts.gstatic.com,Google
+
+# Google APIs
+DOMAIN-SUFFIX,apis.google.com,Google
+DOMAIN-SUFFIX,ajax.googleapis.com,Google
+DOMAIN-SUFFIX,www.googleapis.com,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+
+# Google Cloud
+DOMAIN-SUFFIX,cloud.google.com,Google
+DOMAIN-SUFFIX,console.cloud.google.com,Google
+DOMAIN-SUFFIX,cloud.googleusercontent.com,Google
+DOMAIN-SUFFIX,appspot.com,Google
+DOMAIN-SUFFIX,cloudfunctions.net,Google
+DOMAIN-SUFFIX,gcr.io,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+DOMAIN-SUFFIX,storage.googleapis.com,Google
+DOMAIN-SUFFIX,storage.cloud.google.com,Google
+DOMAIN-SUFFIX,compute.googleapis.com,Google
+DOMAIN-SUFFIX,container.googleapis.com,Google
+DOMAIN-SUFFIX,artifactregistry.googleapis.com,Google
+
+# Google AI / Gemini
+DOMAIN-SUFFIX,gemini.google.com,Google
+DOMAIN-SUFFIX,bard.google.com,Google
+DOMAIN-SUFFIX,aistudio.google.com,Google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com,Google
+DOMAIN-SUFFIX,ai.google.dev,Google
+DOMAIN-SUFFIX,deepmind.google,Google
+DOMAIN-SUFFIX,deepmind.com,Google
+DOMAIN-SUFFIX,notebooklm.google.com,Google
+
+# Google Search AI / Discover
+DOMAIN-SUFFIX,labs.google,Google
+DOMAIN-SUFFIX,labs.google.com,Google
+DOMAIN-SUFFIX,discover.google.com,Google
+DOMAIN-SUFFIX,news.google.com,Google
+
+# Google News
+DOMAIN-SUFFIX,news.google.com,Google
+
+# Google Translate
+DOMAIN-SUFFIX,translate.google.com,Google
+DOMAIN-SUFFIX,translate.googleapis.com,Google
+DOMAIN-SUFFIX,translate.googleusercontent.com,Google
+
+# Google Meet
+DOMAIN-SUFFIX,meet.google.com,Google
+DOMAIN-SUFFIX,meetings.google.com,Google
+
+# Google Chat
+DOMAIN-SUFFIX,chat.google.com,Google
+DOMAIN-SUFFIX,huddles.google.com,Google
+
+# Google Calendar
+DOMAIN-SUFFIX,calendar.google.com,Google
+
+# Google Contacts
+DOMAIN-SUFFIX,contacts.google.com,Google
+
+# Google Keep
+DOMAIN-SUFFIX,keep.google.com,Google
+
+# Google Tasks
+DOMAIN-SUFFIX,tasks.google.com,Google
+
+# Google Groups
+DOMAIN-SUFFIX,groups.google.com,Google
+DOMAIN-SUFFIX,googlegroups.com,Google
+
+# Google Classroom
+DOMAIN-SUFFIX,classroom.google.com,Google
+DOMAIN-SUFFIX,classroom.googleusercontent.com,Google
+
+# Google Sites
+DOMAIN-SUFFIX,sites.google.com,Google
+
+# Google Forms
+DOMAIN-SUFFIX,forms.google.com,Google
+
+# Google Blogger
+DOMAIN-SUFFIX,blogger.com,Google
+DOMAIN-SUFFIX,blogspot.com,Google
+DOMAIN-SUFFIX,blogspot.jp,Google
+DOMAIN-SUFFIX,blogspot.com,Google
+
+# Google Firebase
+DOMAIN-SUFFIX,firebase.google.com,Google
+DOMAIN-SUFFIX,firebaseio.com,Google
+DOMAIN-SUFFIX,firebaseapp.com,Google
+DOMAIN-SUFFIX,firebasedatabase.app,Google
+DOMAIN-SUFFIX,firebasestorage.googleapis.com,Google
+
+# Google reCAPTCHA
+DOMAIN-SUFFIX,recaptcha.net,Google
+DOMAIN-SUFFIX,google.com,Google
+
+# Google Safe Browsing
+DOMAIN-SUFFIX,safebrowsing.google.com,Google
+DOMAIN-SUFFIX,safebrowsing.googleapis.com,Google
+DOMAIN-SUFFIX,enterprise-safebrowsing.googleapis.com,Google
+DOMAIN-SUFFIX,safebrowsing-cache.google.com,Google
+
+# Google Analytics
+DOMAIN-SUFFIX,google-analytics.com,Google
+DOMAIN-SUFFIX,googletagmanager.com,Google
+DOMAIN-SUFFIX,googletagservices.com,Google
+DOMAIN-SUFFIX,googlesyndication.com,Google
+DOMAIN-SUFFIX,googleadservices.com,Google
+DOMAIN-SUFFIX,doubleclick.net,Google
+DOMAIN-SUFFIX,doubleclick.com,Google
+DOMAIN-SUFFIX,2mdn.net,Google
+
+# Google Ads
+DOMAIN-SUFFIX,ads.google.com,Google
+DOMAIN-SUFFIX,adservices.google.com,Google
+DOMAIN-SUFFIX,googleadservices.com,Google
+DOMAIN-SUFFIX,doubleclick.net,Google
+
+# Google Search Console
+DOMAIN-SUFFIX,search.google.com,Google
+DOMAIN-SUFFIX,searchconsole.google.com,Google
+
+# Google Business
+DOMAIN-SUFFIX,business.google.com,Google
+
+# Google One
+DOMAIN-SUFFIX,one.google.com,Google
+
+# Google Account / Privacy
+DOMAIN-SUFFIX,myaccount.google.com,Google
+DOMAIN-SUFFIX,myactivity.google.com,Google
+DOMAIN-SUFFIX,policies.google.com,Google
+DOMAIN-SUFFIX,safety.google,Google
+DOMAIN-SUFFIX,about.google,Google
+
+# Google Pay
+DOMAIN-SUFFIX,pay.google.com,Google
+DOMAIN-SUFFIX,payments.google.com,Google
+DOMAIN-SUFFIX,payments.googleusercontent.com,Google
+DOMAIN-SUFFIX,googlepayments.com,Google
+
+# Google Wallet
+DOMAIN-SUFFIX,wallet.google.com,Google
+
+# Google Shopping
+DOMAIN-SUFFIX,shopping.google.com,Google
+DOMAIN-SUFFIX,googlecommerce.com,Google
+
+# Google Arts & Culture
+DOMAIN-SUFFIX,artsandculture.google.com,Google
+
+# Google Books
+DOMAIN-SUFFIX,books.google.com,Google
+DOMAIN-SUFFIX,books.googleusercontent.com,Google
+
+# Google Scholar
+DOMAIN-SUFFIX,scholar.google.com,Google
+
+# Google Trends
+DOMAIN-SUFFIX,trends.google.com,Google
+
+# Google Finance
+DOMAIN-SUFFIX,finance.google.com,Google
+
+# Google Flights
+DOMAIN-SUFFIX,google.com,Google
+DOMAIN-SUFFIX,flights.google.com,Google
+
+# Google Travel
+DOMAIN-SUFFIX,travel.google.com,Google
+
+# Google Voice
+DOMAIN-SUFFIX,voice.google.com,Google
+
+# Google Fi
+DOMAIN-SUFFIX,fi.google.com,Google
+
+# Google Domains / Workspace
+DOMAIN-SUFFIX,workspace.google.com,Google
+DOMAIN-SUFFIX,admin.google.com,Google
+DOMAIN-SUFFIX,enterprise.google.com,Google
+DOMAIN-SUFFIX,googleapps.com,Google
+DOMAIN-SUFFIX,googlehosted.com,Google
+DOMAIN-SUFFIX,googleenterprise.com,Google
+
+# Google Developer
+DOMAIN-SUFFIX,developers.google.com,Google
+DOMAIN-SUFFIX,developer.android.com,Google
+DOMAIN-SUFFIX,developer.chrome.com,Google
+DOMAIN-SUFFIX,androiddevelopers.googleblog.com,Google
+DOMAIN-SUFFIX,googlesource.com,Google
+DOMAIN-SUFFIX,googlecode.com,Google
+
+# Google Play Developer
+DOMAIN-SUFFIX,play.google.com,Google
+DOMAIN-SUFFIX,play.googleapis.com,Google
+DOMAIN-SUFFIX,androidpublisher.googleapis.com,Google
+
+# Google Storage / CDN
+DOMAIN-SUFFIX,storage.googleapis.com,Google
+DOMAIN-SUFFIX,commondatastorage.googleapis.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN-SUFFIX,googlehosted.com,Google
+
+# Google Certificate / Security
+DOMAIN-SUFFIX,pki.google.com,Google
+DOMAIN-SUFFIX,crl.pki.goog,Google
+DOMAIN-SUFFIX,ocsp.pki.goog,Google
+
+# Google Notification
+DOMAIN-SUFFIX,notifications.google.com,Google
+DOMAIN-SUFFIX,client-channel.google.com,Google
+
+# Google Captive Portal / Connectivity
+DOMAIN-SUFFIX,connectivitycheck.gstatic.com,Google
+DOMAIN-SUFFIX,connectivitycheck.android.com,Google
+DOMAIN-SUFFIX,ipv4.google.com,Google
+
+# Google CDN / Static
+DOMAIN-SUFFIX,csi.gstatic.com,Google
+DOMAIN-SUFFIX,ssl.gstatic.com,Google
+DOMAIN-SUFFIX,www.gstatic.com,Google
+DOMAIN-SUFFIX,static.googleusercontent.com,Google
+
+# Google Hosted / Apps
+DOMAIN-SUFFIX,googlegoro.com,Google
+DOMAIN-SUFFIX,googlealumni.com,Google
+DOMAIN-SUFFIX,withgoogle.com,Google
+DOMAIN-SUFFIX,googlezip.net,Google
+DOMAIN-SUFFIX,stackdriver.com,Google
+DOMAIN-SUFFIX,picasa.com,Google
+DOMAIN-SUFFIX,usercontent.google.com,Google
+
+# Google Video / Media
+DOMAIN-SUFFIX,video.google.com,Google
+DOMAIN-SUFFIX,video.googleusercontent.com,Google
+DOMAIN-SUFFIX,googlevideo.com,Google
+
+# Google Waze
+DOMAIN-SUFFIX,waze.com,Google
+
+# Google Earth
+DOMAIN-SUFFIX,earth.google.com,Google
+
+# Google Lens
+DOMAIN-SUFFIX,lens.google.com,Google
+
+# Google Alerts
+DOMAIN-SUFFIX,google.com,Google
+
+# Google Search Services
+DOMAIN-SUFFIX,googleadservices.com,Google
+DOMAIN-SUFFIX,googleweblight.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+
+# Google Workspace / APIs 通用兜底
+DOMAIN-SUFFIX,clients.google.com,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+DOMAIN-SUFFIX,gstatic.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN-SUFFIX,ggpht.com,Google
+DOMAIN-SUFFIX,gvt1.com,Google
+DOMAIN-SUFFIX,gvt2.com,Google
+DOMAIN-SUFFIX,gvt3.com,Google
+DOMAIN-SUFFIX,gvt6.com,Google
+DOMAIN-SUFFIX,gvt9.com,Google
+DOMAIN-SUFFIX,1e100.net,Google
+
+# Google 全系核心域名兜底
+DOMAIN-SUFFIX,google.com,Google
+DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+DOMAIN-SUFFIX,gstatic.com,Google
+DOMAIN-SUFFIX,ggpht.com,Google
+DOMAIN-SUFFIX,googlevideo.com,Google
+DOMAIN-SUFFIX,googleadservices.com,Google
+DOMAIN-SUFFIX,googlesyndication.com,Google
+DOMAIN-SUFFIX,googletagmanager.com,Google
+DOMAIN-SUFFIX,googletagservices.com,Google
+DOMAIN-SUFFIX,googlesource.com,Google
+DOMAIN-SUFFIX,googlepayments.com,Google
+DOMAIN-SUFFIX,googledrive.com,Google
+DOMAIN-SUFFIX,googleapps.com,Google
+DOMAIN-SUFFIX,googlehosted.com,Google
+DOMAIN-SUFFIX,googlecommerce.com,Google
+DOMAIN-SUFFIX,googleenterprise.com,Google
+DOMAIN-SUFFIX,googlealumni.com,Google
+DOMAIN-SUFFIX,googlecode.com,Google
+DOMAIN-SUFFIX,googlezip.net,Google
+DOMAIN-SUFFIX,withgoogle.com,Google
+DOMAIN-SUFFIX,stackdriver.com,Google
+DOMAIN-SUFFIX,picasa.com,Google
+DOMAIN-SUFFIX,recaptcha.net,Google
+DOMAIN-SUFFIX,1e100.net,Google
