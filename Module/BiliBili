@@ -1,5 +1,5 @@
 name: 哔哩哔哩
-icon: https://cdn.worldvectorlogo.com/logos/bilibili.svg
+icon: https://tr.rbxcdn.com/180DAY-f61bcf26df08085480f11b59276bc2d6/420/420/Image/Webp/noFilter
 
 body_rewrites:
 - response_jq:
