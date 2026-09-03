@@ -1,5 +1,5 @@
 name: 哔哩哔哩
-icon: https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/e6/9e/63e69e8d-89a9-ea30-d3cc-da6706fdc8c9/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.png
+icon: https://i.pinimg.com/736x/f8/a4/de/f8a4de822bdd6ff9924d01d2ec9e8ff7.jpg
 
 body_rewrites:
 - response_jq:
