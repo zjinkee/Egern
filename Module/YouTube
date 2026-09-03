@@ -8,7 +8,7 @@ map_locals:
 
 scriptings:
 - http_response:
-    name: 广告处理
+    name: 视频广告
     match: ^https:\/\/[^\/]+\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|config))(\?(.*))?$
     script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/Youtube.js
     body_required: true
