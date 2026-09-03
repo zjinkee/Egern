@@ -26,7 +26,7 @@ scriptings:
     timeout: 10
     body_required: true
 - http_response:
-    name: 重写播放
+    name: 请求播放
     match: ^https:\/\/bd-api\.kuwo\.cn\/api\/play\/music\/v2\/(checkRight|audioUrl)
     script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
     timeout: 10
