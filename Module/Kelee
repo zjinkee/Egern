@@ -1,0 +1,14 @@
+name: 规则转Egern
+icon: https://img.te5.com/uploads/allimg/210209/118-2102091U645.jpg@q_80
+
+header_rewrites:
+- replace:
+    match: ^https:\/\/rule\.kelee\.one/
+    name: user-agent
+    value: Loon/984 CFNetwork/3860.700.1 Darwin/25.6.0
+    type: request
+
+mitm:
+  hostnames:
+    includes:
+    - rule.kelee.one
