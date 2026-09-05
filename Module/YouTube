@@ -10,7 +10,7 @@ scriptings:
 - http_response:
     name: 视频广告
     match: ^https:\/\/[^\/]+\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|config))(\?(.*))?$
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/Youtube.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/YTube.js
     body_required: true
     binary_body: true
 
