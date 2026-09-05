@@ -10,31 +10,31 @@ scriptings:
 - http_response:
     name: 开屏广告
     match: ^https:\/\/us\.l\.qq\.com\/exapp
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/bodian.js
     timeout: 10
     body_required: true
 - http_response:
     name: 界面
     match: ^https:\/\/bd-api\.kuwo\.cn\/api\/(service\/(home\/index|global\/config\/scene)|search\/topic\/word\/list)
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/bodian.js
     timeout: 10
     body_required: true
 - http_response:
     name: 歌曲信息
     match: ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/info
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/bodian.js
     timeout: 10
     body_required: true
 - http_response:
     name: 请求播放
     match: ^https:\/\/bd-api\.kuwo\.cn\/api\/play\/music\/v2\/(checkRight|audioUrl)
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/bodian.js
     timeout: 10
     body_required: true
 - http_response:
     name: 会员信息
     match: ^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/users\/(pub|login)
-    script_url: https://github.com/zjinkee/js/raw/refs/heads/main/Egern/bodian.js
+    script_url: https://github.com/zjinkee/Egern/raw/refs/heads/main/js/bodian.js
     timeout: 10
     body_required: true
     
