@@ -1,8 +1,6 @@
 var url = $request.url;
 var body = $response.body;
 
-var done = false;
-
 if (/us\.l\.qq\.com\/exapp/i.test(url)) {
     var obj = JSON.parse(body);
     if (obj.data) {
@@ -21,9 +19,8 @@ if (/us\.l\.qq\.com\/exapp/i.test(url)) {
     }
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (/api\/search\/topic\/word\/list/i.test(url)) {
+} else if (/api\/search\/topic\/word\/list/i.test(url)) {
     var obj = JSON.parse(body);
     if (obj.data) {
         delete obj.data.globalJumpInfo;
@@ -33,9 +30,8 @@ if (/api\/search\/topic\/word\/list/i.test(url)) {
     }
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (/api\/service\/global\/config\/scene/i.test(url)) {
+} else if (/api\/service\/global\/config\/scene/i.test(url)) {
     var obj = JSON.parse(body);
     if (obj.data) {
         obj.data.showShopEntry = false;
@@ -43,10 +39,9 @@ if (/api\/service\/global\/config\/scene/i.test(url)) {
     }
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (/api\/service\/home\/index/i.test(url)) {
-    let obj = JSON.parse(body);
+} else if (/api\/service\/home\/index/i.test(url)) {
+    var obj = JSON.parse(body);
     if (obj.data) {
         obj.data.moduleList = obj.data.moduleList.filter(item =>
             ![1, 2, 6, 8, 12].includes(item.type)
@@ -54,9 +49,8 @@ if (/api\/service\/home\/index/i.test(url)) {
     }
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (/api\/service\/music\/info/i.test(url)) {
+} else if (/api\/service\/music\/info/i.test(url)) {
     var obj = JSON.parse(body);
     if (obj.data) {
         obj.data.showAd = 0;
@@ -70,11 +64,9 @@ if (/api\/service\/music\/info/i.test(url)) {
     }
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (/api\/play\/music\/v2\/checkRight/i.test(url)) {
+} else if (/api\/play\/music\/v2\/checkRight/i.test(url)) {
     var obj = JSON.parse(body);
-
     var boy = {
         reqId: obj.reqId,
         code: 200,
@@ -88,11 +80,8 @@ if (/api\/play\/music\/v2\/checkRight/i.test(url)) {
 
     body = JSON.stringify(boy);
     $done({ body });
-}
 
-if (/api\/play\/music\/v2\/audioUrl/i.test(url)) {
-    done = true;
-
+} else if (/api\/play\/music\/v2\/audioUrl/i.test(url)) {
     var obj = JSON.parse(body);
     var rid = url.match(/musicId=([^&]+)/)[1];
     var url =
@@ -107,7 +96,7 @@ if (/api\/play\/music\/v2\/audioUrl/i.test(url)) {
             });
         } else {
             var mobi = JSON.parse(body);
-            var data = {
+            var kuwo = {
                 reqId: obj.reqId,
                 data: {
                     format: mobi.data.format,
@@ -122,17 +111,14 @@ if (/api\/play\/music\/v2\/audioUrl/i.test(url)) {
                 profileId: "site",
                 curTime: obj.curTime
             };
-
             $done({
-                body: JSON.stringify(data)
+                body: JSON.stringify(kuwo)
             });
         }
     });
-}
 
-if (/api\/ucenter\/users\/(pub|login)/i.test(url)) {
+} else if (/api\/ucenter\/users\/(pub|login)/i.test(url)) {
     var obj = JSON.parse(body);
-
     if (obj.data) {
         if (obj.data.payInfo) {
             var pay = obj.data.payInfo;
@@ -162,7 +148,6 @@ if (/api\/ucenter\/users\/(pub|login)/i.test(url)) {
             pay.signPayType = 1;
             pay.expireDate = 2524608000000;
         }
-
         if (obj.data.userInfo) {
             var pay = obj.data.userInfo;
 
@@ -175,8 +160,7 @@ if (/api\/ucenter\/users\/(pub|login)/i.test(url)) {
 
     body = JSON.stringify(obj);
     $done({ body });
-}
 
-if (!done) {
+} else {
     $done({ body });
 }
